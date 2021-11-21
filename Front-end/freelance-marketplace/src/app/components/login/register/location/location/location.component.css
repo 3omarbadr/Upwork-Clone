@@ -1,0 +1,24 @@
+@import url(../../main.css);
+select {
+    width: 30%;
+}
+
+.input-group {
+    width: 33%;
+}
+
+#two {
+    width: 20%;
+    margin-bottom: 15px;
+}
+.a{
+  color:var(--mc);
+}
+.a:hover{
+    background-color: var(--bg);
+    cursor: pointer;
+}
+.menubox{
+    overflow-y: auto;
+    max-height: 180px;
+}

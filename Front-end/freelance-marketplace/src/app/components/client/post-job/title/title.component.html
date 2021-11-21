@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-2 d-sm-none d-md-block">
+            <!-- <post-job-aside></post-job-aside> -->
+        </div>
+
+        <div class="col-sm-12 col-md-10 mt-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <form action="" [formGroup]="form">
+
+                            <div class="card mb-5">
+                                <div class="card-header">
+                                    <h2>Title</h2>
+                                    <p>Step 1 of 5</p>
+                                </div>
+
+                                <div class="card-body">
+                                    <p class="fw-bold">
+                                        Enter the name of your job post
+                                    </p>
+                                    <input class="form-control" name="job_title" formControlName="job_title" type="text" placeholder="Enter the title of the job" aria-label="default input example">
+                                    <div *ngIf="form.controls.job_title.invalid && isLogged || (form.controls.job_title.dirty || form.controls.job_title.touched)">
+                                        <small class="text-danger fw-bold mb-3" *ngIf="form.controls.job_title.hasError('required')">This field is required </small>
+                                        <small class="text-danger fw-bold mb-3" *ngIf="form.controls.job_title.hasError('minlength')">Please write more than 3 characters</small>
+                                        <small class="text-danger fw-bold mb-3" *ngIf="form.controls.job_title.hasError('maxlength')">Sorry, you can't write more than 255 characters</small>
+                                    </div>
+                                    <p class="fw-bold mt-3">
+                                        Here are some good examples:
+                                    </p>
+                                    <ul>
+                                        <li>Developer needed for creating a responsive WordPress Theme</li>
+                                        <li>CAD designer to create a 3D model of a residential building</li>
+                                        <li>Need a design for a new company logo</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <p class="fw-bold">
+                                        Job Category
+                                    </p>
+                                    <p>Let's categorize your job, which helps us personalize your job details and match your job to relevant freelancers and agencies.</p>
+
+                                    <p class="fw-bold">Category</p>
+                                    <select class="form-select form-select-sm" placeholder="select" formControlName="category_id" name="category_id" aria-label=".form-select-sm example" *ngIf="isCategoryGet">
+                                        <option selected *ngFor="let item of categoryData.data" value="{{item.id}}" >{{item.name}}</option>
+                                    </select>
+
+                                </div>
+                                <div class="card-footer py-4">
+                                    <button class="btn btn-primary px-5 mx-3 py-2 rounded-pill" type="submit" (click)="next()">next</button>
+
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,73 @@
+.container {
+  border-radius: 50px;
+}
+
+.right{
+  background-color: var(--mc);
+}
+h1{
+ font-size: 9vh;
+ font-weight: 600;
+ margin-bottom: 10vh;
+ margin-left: 5px;
+
+}
+.roo{
+  background-color: var(--mc) ;
+}
+.card{
+  border: none;
+  color: var(--mc);
+
+}
+.card h5{
+  font-weight:bold ;
+  font-family: Montserrat, sans-serif;
+  color: var(--mc);
+
+
+}
+.card img{
+  border-radius: 10px;
+}
+.last h1{
+  color: var(--mc);
+
+}
+@media only screen and (max-width: 1200px) {
+
+
+}
+@media only screen and (max-width: 992px) {
+  .bott h5{
+      font-size: 15px;
+  }
+  h1{font-size: 55px;}
+}
+@media only screen and (max-width: 768px) {
+  .section3 img{
+      margin-left: 1px;
+  } h1{
+      font-size: 65px;
+  }
+  .bott h5{
+      font-size: 25px;
+  }
+}
+@media only screen and (max-width: 600px) {
+
+  h1{
+      font-size: 35px;
+  }
+  .section3 img{
+      margin-left: 2px;
+  }
+  .bott h5{
+      font-size: 15px;
+  }
+}
+
+
+
+
+

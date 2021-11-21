@@ -1,0 +1,235 @@
+body {
+    font-family: Montserrat, sans-serif;
+    background-color: var(--bg);
+}
+
+.container {
+    background-color: white;
+    width: 75%;
+}
+
+.image {
+    height: 6.25rem;
+    border: 1px solid black;
+}
+
+h4,
+p,
+h5 {
+    display: inline-block;
+}
+
+.v_pro {
+    padding: 1rem;
+}
+
+.ii {
+    padding: 0.3125rem;
+    margin-left: .5rem;
+}
+
+
+i:hover {
+    cursor: pointer;
+}
+
+span {
+    margin-left: .8rem;
+}
+
+.right {
+    padding: 1.2rem;
+}
+
+.r {
+    height: 15.5rem;
+}
+
+.work,
+.portifolio,
+.skills {
+    height: 4.53rem;
+}
+
+.card {
+    border: none;
+    text-align: center;
+    height: 14rem;
+    color: var(--mc);
+}
+
+.car {
+    margin-top: 1rem;
+}
+
+.card-title {
+    color: black;
+}
+
+a {
+    color: var(--mc);
+}
+
+.ii {
+    color: var(--mc);
+}
+
+p,
+.ii,
+h4 {
+    font-size: 1.1rem;
+    margin-top: .5rem;
+}
+
+img {
+    height: 6.25rem;
+}
+
+h4,
+h5 {
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+.ca {
+    position: absolute;
+}
+
+.b1 {
+    background-color: white;
+    color: var(--mc);
+    font-size: 1rem;
+    width: 11.875rem;
+    height: 3.125rem;
+    cursor: pointer;
+}
+
+.b1:hover {
+    background-color: var(--mc);
+    color:white;
+}
+
+.b2 {
+    background-color: var(--mc);
+    color: white;
+    font-size: 1rem;
+    width: 11.875rem;
+    height: 3.125rem;
+    cursor: pointer;
+}
+
+.b2:hover {
+    color: var(--mc);
+    background-color: var(--bg);
+}
+
+.skillname{
+    width: 6rem ;
+    height: 2rem;
+    background-color: var(--mc);
+    color: white;
+}
+.skillname:hover{
+    background-color: var(--bg);
+    color: var(--mc);
+}
+
+@media only screen and (max-width: 992px) {
+    .b1,
+    .b2 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .b1,
+    .b2 {
+        display: none;
+    }
+    .card {
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .b1,
+    .b2 {
+        display: none;
+    }
+    .card {
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    b1,
+    b2 {
+        display: none;
+    }
+}
+#one {
+  width: 210px;
+
+}
+#one:hover{
+  cursor: pointer;
+}
+#two
+{
+  cursor: pointer;
+  /* width: 68px; */
+
+}
+#two:hover{
+  text-decoration: underline;
+}
+#three{
+  background-color:var(--mc) ;
+  color: white;
+  border-radius:50%;
+
+}
+.drag-drop{
+  border: .125rem dotted  var(--mc);
+  height: 5rem;
+  width: 29rem;
+  /* margin-left: 20px; */
+}
+
+.drag-drop span{
+  color: var(--tc);
+}
+
+.drag-drop span:hover{
+  cursor: pointer;
+  text-decoration: underline ;
+}
+#four {
+  width: 90px;
+
+}
+#five {
+  width: 126px;
+
+}
+#six{
+  width: 70px;
+}
+#nine{
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color:var(--mc) ;
+  color: white;
+  border-radius:50%;
+  margin-left: 450px;
+}
+#am{
+  text-align: center;
+  display: inline-block;
+  margin: 20px;
+}
+
+.portImage{
+    height: 275px;
+}

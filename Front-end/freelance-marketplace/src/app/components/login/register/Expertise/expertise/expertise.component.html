@@ -1,0 +1,54 @@
+<div class=" container py-5 px-3">
+
+    <div class="row">
+
+
+        <section class="sidebar d-none d-md-block col-md-3">
+            <app-sidebar></app-sidebar>
+        </section>
+        <section class="expertise col-12 col-md-9">
+
+            <div class="header">
+                <h3>Skills</h3>
+                <p>3 of 8</p>
+            </div>
+            <form action="" [formGroup]="form">
+                <div>
+                    <input type="hidden" formControlName="user_id" [(ngModel)]="user_id" name="user_id">
+                </div>
+                <div class="body">
+                    <div class="sec sec1">
+                        <p><b>Select your skills</b></p>
+                        <div class="skills"   >
+                            <button  *ngFor="let item of skills " class=" mx-1 my-1  bt1s" [ngClass]="{'bt2s':item.selected}" (click)="addSkill(item)">{{item.name}}</button>
+                        </div>
+                        <div *ngIf="is_skills_notselected">
+                            <small class="text-danger fw-bold mb-3" *ngIf="is_skills_notselected"> please select your skills</small>
+                        </div>
+                    </div>
+                    <div class="sec sec2">
+                        <p><b>Not what you're looking for ?</b></p>
+                        <!------------------------------------start search  bar -------------------------------------------------->
+
+                        
+                        <div class="card dropdown">
+                            <input #inpt type="text" value="" data-bs-toggle="dropdown" aria-expanded="false"  formControlName="searchSkill" class="form-control" [placeholder]="placeholder">
+
+                        </div>
+                        <ul class="menubox card list-group" *ngIf="inpt.value">
+                            <div class="psearch" *ngFor="let item of searchSkills |searchFilter:query">
+                                <a class="list-group-item list-group-item-light"  (click)="addSkillFromDropDown(item,inpt)"> {{item.name}}</a>
+                            </div>
+                        </ul>
+                        <!------------------------------------end search bar -------------------------------------------------->
+                      
+                    </div>
+                    <div class=" footer lg-6 d-sm-flex">
+                        <button class="bt1" routerLink="/user/signup/experience-level">back</button>
+                        <button class="bt2" (click)="submit()">next</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>

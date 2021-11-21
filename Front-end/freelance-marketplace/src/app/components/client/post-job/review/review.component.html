@@ -1,0 +1,108 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-2 d-sm-none d-md-block">
+            <post-job-aside></post-job-aside>
+        </div>
+
+        <div class="col-sm-12 col-md-10 mt-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <form>
+
+                            <div class="card mb-5">
+                                <div class="card-header d-flex py-3">
+                                    <span class="h2">Review and post</span>
+                                    <input type="button" class="btn btn-primary rounded-pill ms-auto" (click)="submit()" value="Post Job Now">
+                                </div>
+
+                                <!-- Title -->
+                                <div class="card-body">
+
+                                    <div class="head d-flex">
+                                        <h4 class="fw-bold d-inline-block">
+                                            Title
+                                        </h4>
+
+                                        <div class="edit mt-md-3 d-inline-block ms-auto">
+                                            <a routerLink="/client/post-job/title" class="p-2">
+                                                <i class="fas fa-pen"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-3">{{currentJobProcess.job_title}}</p>
+
+                                    <p class="fw-bold">
+                                        Category
+                                    </p>
+                                    <span>{{category_name}}</span>
+                                </div>
+                            </div>
+
+                            <!-- Description -->
+                            <div class="card mb-5">
+                                <div class="card-body">
+
+                                    <div class="head d-flex">
+                                        <h4 class="fw-bold d-inline-block">
+                                            Description
+                                        </h4>
+
+                                        <div class="edit mt-md-3 d-inline-block ms-auto">
+                                            <a routerLink="/client/post-job/description" class="p-2">
+                                                <i class="fas fa-pen"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-3 col-6">{{currentJobProcess.description}}</p>
+                                </div>
+                            </div>
+
+
+
+                            <!-- Expertise -->
+                            <div class="card mb-5">
+                                <div class="card-body">
+                                    <div class="head d-flex">
+                                        <h4 class="fw-bold d-inline-block">
+                                            Expertise
+                                        </h4>
+
+                                        <div class="edit mt-md-3 d-inline-block ms-auto">
+                                            <a routerLink="/client/post-job/expertise" class="p-2">
+                                                <i class="fas fa-pen"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <p class="fw-bold">
+                                        Web Design Skills
+                                    </p>
+                                    <span class="skill border rounded-pill px-3 py-2 mx-2 bg-info" *ngFor="let item of skillsData">{{item.name}}</span>
+
+                                    <hr>
+
+                                    <p class="fw-bold">
+                                        Expertise Level
+                                    </p>
+                                    <span>{{experience_level}}</span>
+                                </div>
+                            </div>
+
+                            <!-- submit Job -->
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <a class="btn btn-primary px-5 mx-3 py-2 rounded-pill" (click)="submit()">Post Job Now</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,105 @@
+<div class="container py-5 px-3">
+
+    <div class="row">
+
+
+        <!-- <section class="sidebar d-none d-md-block col-md-3">
+            <app-sidebar></app-sidebar>
+        </section> -->
+        <section class="myinfo col-12">
+            <div class="header">
+                <h3> Location </h3>
+                <p></p>
+            </div>
+            <form action="" [formGroup]="form">
+
+
+                <h3>What are you based?</h3>
+
+                <p> We take your privacy very seriously </p>
+
+
+
+
+                <!-----------------------------------start country --------------------------------->
+                <h3>Country</h3>
+
+                <div class="col-lg-12 col-md-12 col-sm-9" *ngIf="isLocationGet">
+                    <select formControlName="country" #s (change)="selectCountry(s.value)" class="form-select form-select-sm " aria-label=".form-select-sm example">
+                      <!-- <option >Open this select menu</option> -->
+
+                           <option   [value]="item.country_name" *ngFor="let item of arrayOfCountries" >{{item.country_name}}</option>
+
+                    </select>
+                    <select formControlName="country"  #o  (change)="selectCountry(o.value)" class="form-select form-select-sm " aria-label=".form-select-sm example">
+
+                            <option   [value]="item1"  *ngFor="let item1 of arrayOfCountries" >{{item1}}</option>
+
+                    </select>
+                    <div  *ngIf="form.controls.country.invalid && isLogged || (form.controls.country.dirty || form.controls.country.touched)">
+                        <small class="text-danger fw-bold mb-3" *ngIf="form.controls.country.hasError('required')">please select a country</small>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-9" *ngIf="!isLocationGet">
+                    <select name="country" formControlName="country" class="form-select form-select-sm " aria-label=".form-select-sm example">
+                    <!-- <option >Open this select menu</option> -->
+
+                         <option value="egypt">Egypt</option>
+                         <option value="brazil">Brazil</option>
+
+                  </select>
+                    <div *ngIf="form.controls.country.invalid && isLogged || (form.controls.country.dirty || form.controls.country.touched)">
+                        <small class="text-danger fw-bold mb-3" *ngIf="form.controls.country.hasError('required')">please select a country</small>
+                    </div>
+                </div>
+                <br>
+                <!-------------------------------------------end country-------------------------------------------->
+                <!-----------------------------start city------------------------------------>
+                <h3>City </h3>
+                <div class="continer col-lg-12">
+                    <label class="visually-hidden" for="autoSizingInputGroup"></label>
+                    <div class="input-group">
+                        <!-- <i class="fa fa-search"></i> -->
+                        <div class=" dropdown">
+                            <input #inpt type="text" value="" data-bs-toggle="dropdown" aria-expanded="false" [placeholder]="placeholder" formControlName="city" [(ngModel)]="queryloc" class="form-control">
+
+                            <ul class="menubox card list-group" *ngIf="inpt.value">
+                                <div *ngFor="let item of arrayOfCities |searchFilter:queryloc">
+                                    <a class="list-group-item list-group-item-light a" #a (click)="selectState(a)"> {{item.state_name}}</a>
+                                </div>
+                            </ul>
+                            <div *ngIf="form.controls.city.invalid && isLogged || (form.controls.city.dirty || form.controls.city.touched)">
+
+                                <small class="text-danger mx-3 my-2 fw-bold mb-3" *ngIf="form.controls.city.hasError('required')">This field is required</small>
+                                <br></div><br>
+                        </div>
+                    </div>
+                </div>
+
+                <!------------------------------------end city -------------------------------------------------->
+                <h3>Street Address</h3>
+
+                <div class="col-lg-4 col-md-4 col-sm-9 ">
+                    <input formControlName="street" class="form-control" type="text" aria-label="default input example">
+                    <div *ngIf="form.controls.street.invalid && isLogged || (form.controls.street.dirty || form.controls.street.touched)">
+
+                        <small class="text-danger fw-bold mb-3" *ngIf="form.controls.street.hasError('required')">This field is required</small>
+                    </div>
+                    <br>
+                </div> <br>
+
+                <br>
+                <h3>ZIP/Postal Code</h3>
+                <input id="two" formControlName="zip_code" type="number" class="form-control col-lg-4 col-md-6 col-sm-6">
+                <div *ngIf="form.controls.zip_code.invalid && isLogged || (form.controls.zip_code.dirty || form.controls.zip_code.touched)">
+
+                    <small class="text-danger fw-bold mb-3" *ngIf="form.controls.zip_code.hasError('required')">This field is required</small>
+                </div>
+                <div class=" footer lg-6 d-sm-flex">
+                    <button class="bt2" (click)="next()" type="submit">Next</button>
+                </div>
+            </form>
+        </section>
+
+    </div>
+</div>
