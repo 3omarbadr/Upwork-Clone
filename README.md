@@ -8,7 +8,7 @@
 </p>
 
 
-## This Project With LAravel And Angular
+## This Project With Laravel And Angular
 
 The front-end project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.4.
 
