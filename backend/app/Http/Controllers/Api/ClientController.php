@@ -14,8 +14,7 @@ class ClientController extends Controller
     use ApiResponseTrait;
 
     public function index(){
-        $client = Client::all();
-        return $this->apiResponse($client);
+        return $this->apiResponse(Client::all());
     }
 
     public function show($id){
